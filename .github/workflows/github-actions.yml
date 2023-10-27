@@ -43,8 +43,8 @@ jobs:
         ref: main
         path: doc
         token: ${{ secrets.GH_TOKEN }}
-    - name: Print something
-      run: ls -l && ls -l doc
+    # - name: Print something
+    #   run: ls -l && ls -l doc
     - name: Move markdown articles to current directory
       run: |
         rm -f doc/README.md 
