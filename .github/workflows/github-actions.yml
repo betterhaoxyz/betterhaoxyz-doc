@@ -47,9 +47,9 @@ jobs:
     #   run: ls -l && ls -l doc
     - name: Move markdown articles to current directory
       run: |
-        rm -f doc/README.md 
-        mkdir -p source/_posts 
-        mv doc/* source/_posts
+        mkdir -p source/{_posts,images} 
+        mv doc/docs/* source/_posts
+        mv doc/images/* source/images
     - name: Install nodejs ${{ matrix.node_version }}
       uses: actions/setup-node@v3
       with:
@@ -58,6 +58,8 @@ jobs:
       run: npm install
     - name: Build nodejs project
       run: npm run build
+    - name: Prepare site config
+      run: mv doc/siteroot/* doc/siteroot/.[^.]* public
     - name: Push to pages
       uses: peaceiris/actions-gh-pages@v3
       with:
