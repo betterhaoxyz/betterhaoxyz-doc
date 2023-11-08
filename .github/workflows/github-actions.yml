@@ -59,7 +59,8 @@ jobs:
     - name: Build nodejs project
       run: npm run build
     - name: Prepare site config
-      run: mv doc/siteroot/* doc/siteroot/.[^.]* public
+      run: mv doc/siteroot/* public
+      # run: mv doc/siteroot/* doc/siteroot/.[^.]* public
     - name: Push to pages
       uses: peaceiris/actions-gh-pages@v3
       with:
