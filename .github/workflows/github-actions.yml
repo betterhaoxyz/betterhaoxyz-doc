@@ -11,9 +11,9 @@ on:
       - closed
 
 env:
-  HEXO_DOC_REPO: quizthink/quizthink-doc
+  HEXO_DOC_REPO: betterhaoxyz/betterhaoxyz-doc
   HEXO_THEME_REPO: hexojs/hexo-theme-landscape
-  GITHUB_PAGES_REPO: quizthink/quizthink.github.io
+  GITHUB_PAGES_REPO: betterhaoxyz/betterhaoxyz.github.io
   
 jobs:
   build:
